@@ -1,0 +1,1 @@
+{"art": "html", "name": "MAZZFLATOR", "vendor": "Mazztock", "uid": "MzFl", "version": 2005, "so": "mazzflator.so", "params": "params.json", "layout": "layout.conf", "skin": "skin", "effect": true, "build": {"root": ".", "sources": ["mpc_wrapper.cpp"], "cflags": ["-O3"], "libs": ["-lm"]}, "skin_post": "skin_post.py"}

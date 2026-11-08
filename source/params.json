@@ -1,0 +1,135 @@
+[
+  {
+    "key": "input",
+    "name": "Input",
+    "min": 0.0,
+    "max": 1.0,
+    "default": 0.4,
+    "unit": "dB"
+  },
+  {
+    "key": "curve",
+    "name": "Curve",
+    "min": 0.0,
+    "max": 1.0,
+    "default": 0.5,
+    "unit": ""
+  },
+  {
+    "key": "effect",
+    "name": "Effect",
+    "min": 0.0,
+    "max": 1.0,
+    "default": 0.0,
+    "unit": "%"
+  },
+  {
+    "key": "output",
+    "name": "Output",
+    "min": 0.0,
+    "max": 1.0,
+    "default": 1.0,
+    "unit": "dB"
+  },
+  {
+    "key": "clip",
+    "name": "CLIP",
+    "min": 0,
+    "max": 1,
+    "default": 1,
+    "type": "switch"
+  },
+  {
+    "key": "bandsplit",
+    "name": "SPLIT",
+    "min": 0,
+    "max": 1,
+    "default": 0,
+    "type": "switch"
+  },
+  {
+    "key": "bypass",
+    "name": "BYPASS",
+    "min": 0,
+    "max": 1,
+    "default": 0,
+    "type": "switch"
+  },
+  {
+    "key": "in_l",
+    "name": "In L",
+    "min": 0.0,
+    "max": 1.0,
+    "default": 0.0,
+    "unit": ""
+  },
+  {
+    "key": "in_r",
+    "name": "In R",
+    "min": 0.0,
+    "max": 1.0,
+    "default": 0.0,
+    "unit": ""
+  },
+  {
+    "key": "out_l",
+    "name": "Out L",
+    "min": 0.0,
+    "max": 1.0,
+    "default": 0.0,
+    "unit": ""
+  },
+  {
+    "key": "out_r",
+    "name": "Out R",
+    "min": 0.0,
+    "max": 1.0,
+    "default": 0.0,
+    "unit": ""
+  },
+  {
+    "key": "fx_dose",
+    "name": "FX Dose",
+    "min": 0.0,
+    "max": 1.0,
+    "default": 0.0,
+    "unit": ""
+  },
+  {
+    "key": "band",
+    "name": "BAND",
+    "min": 0,
+    "max": 1,
+    "default": 0,
+    "type": "switch"
+  },
+  {
+    "key": "aa",
+    "name": "AA",
+    "min": 0,
+    "max": 1,
+    "default": 0,
+    "type": "switch"
+  },
+  {
+    "key": "ag",
+    "name": "AUTOGAIN",
+    "min": 0,
+    "max": 1,
+    "default": 0,
+    "type": "switch"
+  },
+  {
+    "key": "ag_db",
+    "name": "GAIN",
+    "display": "string"
+  },
+  {
+    "key": "in_clip",
+    "name": "In Clip",
+    "min": 0.0,
+    "max": 1.0,
+    "default": 0.0,
+    "unit": ""
+  }
+]
