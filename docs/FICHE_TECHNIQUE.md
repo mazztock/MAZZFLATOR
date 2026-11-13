@@ -1,6 +1,8 @@
-# MAZZFLATOR v1.0 — fiche technique
+# MAZZFLATOR v2.0 — fiche technique
 
-Version installée sur la MPC le 08/11/2026 (vst.json 2005, uid MzFl). Moteur : `1-projet/mpc_wrapper.cpp`.
+Version 2.0 (SDK officiel Akai / inMusic, MPC OS 3.10.1 et plus, uid MzFl, 32 et 64 bits). Moteur : `source/src/MazzflatorEngine.cpp`, identique au son de la v1.0 (comparaison échantillon par échantillon : `source/tests/run_compare.sh`).
+
+La v2.0 garde les mêmes réglages, le même son et le même skin que la v1.0 ; seul le socle change (SDK officiel au lieu de mpc-vst-plugins). Le calcul se fait en 32 bits flottants au lieu de 16 bits entiers, et la sortie reste plafonnée à 0 dBFS.
 
 ## Réglages
 
@@ -28,15 +30,15 @@ Version installée sur la MPC le 08/11/2026 (vst.json 2005, uid MzFl). Moteur : 
 - Dosage (13 LED) et halo orange : crête du signal ajouté par l'effet comparée au niveau moyen d'entrée (~2 s). Échelle -24 → +12 dB, retombée 70 ms (`DOSE_RELEASE_S`). EFFECT à 0 = éteint. Le Sonnox affiche une moyenne : choix volontaire d'un affichage crête, plus vivant.
 - Afficheur jaune : valeur d'OUTPUT en dB.
 
-## Skin (layout.conf)
+## Skin
+Depuis la v2.0, le skin est livré tel quel dans `source/skins/` (TUI.json, Q-Links.json, images) et recopié par le build du SDK. Notes de fabrication (v1.0, `layout.conf`) :
 - Coordonnées du layout = pixel du fond + 86 en hauteur. Boutons avec `ns=0` (zone de toucher = image).
 - Poignées : 31 images (INPUT, EFFECT, CURVE) et 33 images (OUTPUT), 84 px de large, pour que les repères tombent pile. Le SDK les refait toujours en 36 images.
 - Une filmstrip plus large que haute est lue à l'horizontale par le SDK : garder les images plus hautes que larges.
 - Mémoire décodée du skin ≈ 19 Mo.
-- Le fond se refait avec `4-sources-graphiques/skin2026/generateur/v9.py` (`python3 v9.py 0 bg` puis `node shot.js bg 1`).
 
 ## Différences assumées avec le Sonnox Oxford Inflator
 Ajouts : AUTO GAIN, AA, BAND, diode tenue 2 s fixe. Absents : fenêtres de valeur chiffrées pour INPUT / EFFECT / CURVE, menu de tenue de la diode (2 s / 5 s / infini), vu-mètres mono/stéréo automatiques, gestionnaire de presets. Dosage en crête au lieu de moyenne.
 
 ## Licence
-Dérivé de JS Inflator (Kiriki-liszt), sous GPL v3 ; SDK MPC sous licence MIT. Toute version partagée reste sous GPL v3, avec son code source. Ne pas utiliser le nom ni le logo Sonnox. Les deux voies (partage GPL / version fermée) sont détaillées dans FEUILLE_DE_ROUTE_VERSION_ORDI.md.
+Dérivé de JS Inflator (Kiriki-liszt), sous GPL v3 ; SDK MPC officiel (Akai / inMusic) sous licence MIT. Toute version partagée reste sous GPL v3, avec son code source. Ne pas utiliser le nom ni le logo Sonnox.

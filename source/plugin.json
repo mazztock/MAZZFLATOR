@@ -1,0 +1,17 @@
+{
+  "name": "MAZZFLATOR",
+  "manufacturer": "Mazztock",
+  "version": "2.0.0",
+  "format": "vst2",
+  "kind": "effect",
+  "uid": "MzFl",
+  "numInputs": 2,
+  "numOutputs": 2,
+  "category": "Effect",
+  "file32": "VST/mazzflator-arm32.so",
+  "file64": "VST/mazzflator-arm64.so",
+  "description": "MAZZFLATOR : saturation douce façon Inflator (CURVE, CLIP 0 dB, SPLIT, BAND, AA, AUTOGAIN), dérivé de JS Inflator. Sans lien avec Sonnox.",
+  "author": "Mazztock",
+  "url": "https://github.com/mazztock/MAZZFLATOR",
+  "license": "GPL-3.0-or-later"
+}
