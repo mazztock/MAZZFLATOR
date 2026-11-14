@@ -91,6 +91,10 @@ target_link_libraries(Mazzflator
 if(APPLE)
     add_custom_command(TARGET Mazzflator_CLAP POST_BUILD
         COMMAND codesign --force --sign - "$<TARGET_BUNDLE_DIR:Mazzflator_CLAP>"
-        COMMAND /bin/sh -c "test -d \"$ENV{HOME}/Library/Audio/Plug-Ins/CLAP/MAZZFLATOR.clap\" && codesign --force --sign - \"$ENV{HOME}/Library/Audio/Plug-Ins/CLAP/MAZZFLATOR.clap\" || true"
-        COMMENT "Signature locale du CLAP")
+        COMMENT "Signature locale du CLAP" VERBATIM)
+    if(MAZZ_COPY)   # la copie installée dans ~/Library doit être signée elle aussi
+        add_custom_command(TARGET Mazzflator_CLAP POST_BUILD
+            COMMAND sh -c "codesign --force --sign - \"$HOME/Library/Audio/Plug-Ins/CLAP/MAZZFLATOR.clap\" 2>/dev/null; exit 0"
+            VERBATIM)
+    endif()
 endif()
