@@ -11,7 +11,8 @@ fabrique() {   # $1 = nom court, $2 = bundle, $3 = dossier d'installation
     codesign --force --deep --sign - "$W/$1/$(basename "$2")"
     # pas de « relocation » : sinon Installer remplace une copie trouvée ailleurs (ex. ~/Library) au lieu d'installer
     pkgbuild --analyze --root "$W/$1" "$W/$1.plist"
-    /usr/libexec/PlistBuddy -c "Set :0:BundleIsRelocatable false" "$W/$1.plist"
+    /usr/libexec/PlistBuddy -c "Add :0:BundleIsRelocatable bool false" "$W/$1.plist" 2>/dev/null \
+        || /usr/libexec/PlistBuddy -c "Set :0:BundleIsRelocatable false" "$W/$1.plist"
     pkgbuild --root "$W/$1" --component-plist "$W/$1.plist" --install-location "$3" \
              --identifier "com.mazztock.mazzflator.$1" --version "$VER" "$W/$1.pkg"
 }
