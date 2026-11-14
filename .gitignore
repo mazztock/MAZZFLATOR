@@ -2,3 +2,5 @@
 build/
 dist/
 source/tests/build/
+desktop/tests/
+desktop/libs/
