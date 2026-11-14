@@ -21,6 +21,15 @@
 
 Details: [docs/FICHE_TECHNIQUE.md](docs/FICHE_TECHNIQUE.md) (FR).
 
+## Mesures / Measurements
+![MAZZFLATOR vs Sonnox Inflator](docs/mazzflator_vs_sonnox.png)
+
+**FR** — MAZZFLATOR, en fonctionnement sur la MPC, comparé au Sonnox Oxford Inflator (plugin officiel, dans une DAW). Même signal de test pour les deux : un sinus de 1 kHz par paliers de 3 dB, de -36 à 0 dBFS (44,1 kHz, 24 bits). Réglages identiques : Input 0 dB, Output 0 dB, Effect 0 % puis 100 % avec Curve -50, 0 et +50 ; Clip et Split désactivés (et, côté MAZZFLATOR, AA et AUTO GAIN désactivés). Sur toute la plage, l'écart de gain entre les deux est inférieur à 0,001 dB et celui de la 3e harmonique ne dépasse pas 0,08 dB. À Effect 0 %, la MPC rend le signal intact (résidu à -125 dB).
+À retenir : l'effet est surtout un gain tant que le signal reste bas ; la densité (harmoniques) n'apparaît vraiment que lorsque les crêtes approchent 0 dBFS. Montez INPUT jusqu'à ce que les crêtes touchent 0 dBFS (CLIP allumé), comme avec l'original.
+
+**EN** — MAZZFLATOR running on the MPC, compared with the Sonnox Oxford Inflator (official plugin, in a DAW). Same test signal for both: a 1 kHz sine in 3 dB steps from -36 to 0 dBFS (44.1 kHz, 24-bit). Same settings: Input 0 dB, Output 0 dB, Effect 0 % then 100 % with Curve -50, 0 and +50; Clip and Split off (plus AA and AUTO GAIN off on MAZZFLATOR). Across the whole range, the gain difference is below 0.001 dB and the 3rd-harmonic difference is at most 0.08 dB. At Effect 0 %, the MPC passes the signal untouched (residual at -125 dB).
+Takeaway: at low levels the effect is mostly gain; the density (harmonics) really shows when peaks approach 0 dBFS. Raise INPUT until peaks hit 0 dBFS (CLIP on), as with the original.
+
 ## Installation
 1. On the MPC: **MPC OS 3.10.1 or later** (Preferences → Info), then Preferences → **Enhancements (Beta)** → turn on **Enable Enhancements** and **External Plugin Support**.
 2. Download `MAZZFLATOR-v2.0-MPC.zip` from the **Releases** page and unzip it.
